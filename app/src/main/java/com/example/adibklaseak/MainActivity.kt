@@ -38,48 +38,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun PertsonaiaCard(modifier: Modifier = Modifier) {
-    val pertsonaia = Pertsonaia("Ginyu", 8000 , 20000)
-    Column() {
-        Card (modifier = modifier.weight(1f)){
-            Row(modifier = modifier.fillMaxSize()) {
-                Image(
-                    painter = painterResource(R.drawable.ginyu),
-                    contentDescription = null
-                )
-                Column() {
-                    Text(
-                        text = pertsonaia.name,
-                        fontSize = 16.sp,
-                        lineHeight = 18.sp
-                        )
-                    Row () {
-                        Text (text = "${pertsonaia.ki}")
-                        Text(text = "${pertsonaia.maxKi}")
-                    }
-                }
-            }
-        }
 
-        Card (modifier = modifier.weight(1f)){
-            Row(modifier = modifier.fillMaxSize()) {
-                Image(
-                    painter = painterResource(R.drawable.freezer),
-                    contentDescription = null
-                )
-                Column() {
-                    Text(
-                        text = pertsonaia.name,
-                        fontSize = 16.sp,
-                        lineHeight = 18.sp
-                    )
-                    Row () {
-                        Text (text = "${pertsonaia.ki}")
-                        Text(text = "${pertsonaia.maxKi}")
-                    }
-                }
-            }
-        }
-    }
 }
 
 @Preview(showBackground = true)
