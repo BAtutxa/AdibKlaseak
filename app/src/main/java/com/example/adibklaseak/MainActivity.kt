@@ -58,7 +58,7 @@ fun PertsonaiaCard(modifier: Modifier = Modifier) {
                     }
                 }
             }
-        }
+        }   
 
         Card (modifier = modifier.weight(1f)){
             Row(modifier = modifier.fillMaxSize()) {
