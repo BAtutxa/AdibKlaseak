@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Zarbon",
+    "ki": "20.000",
+    "maxKi": "30.000",
+    "irudia": "zarbon"
+  },
+  {
+    "name": "Freezer",
+    "ki": "530.000",
+    "maxKi": "52.71 Septillion",
+    "irudia": "freezer"
+
+
+  },
+  {
+    "name": "Dodoria",
+    "ki": "18.000",
+    "maxKi": "20.000",
+    "irudia": "dodoria"
+
+  },
+  {
+    "name": "Ginyu",
+    "ki": "9.000",
+    "maxKi": "25.000",
+    "irudia": "ginyu"
+
+  },
+  {
+    "name": "Broly",
+    "ki": "7 quadrillion",
+    "maxKi": "11.2 Septillion",
+    "irudia": "broly"
+
+  },
+  {
+    "name":"Jiren",
+    "ki":"121 Quintillion",
+    "maxKi":"12.1 Septillion",
+    "irudia": "jiren"
+
+  },
+  {
+    "name": "Raditz",
+    "ki": "1.500 ",
+    "maxKi": "1.500 ",
+    "irudia": "raditz"
+  },
+  {
+    "name": "Marcarita ",
+    "ki": "10 septillion",
+    "maxKi": "99.5 septillion",
+    "irudia": "marcarita"
+  }
+]

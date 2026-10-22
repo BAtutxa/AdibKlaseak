@@ -1,10 +1,11 @@
 package com.example.adibklaseak.models
 
-import androidx.annotation.DrawableRes
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Pertsonaia(
     val name : String,
-    val ki : Int,
-    val maxKi : Int,
-    @DrawableRes val irudia : Int
+    val ki : String,
+    val maxKi : String,
+    val irudia : String
 )

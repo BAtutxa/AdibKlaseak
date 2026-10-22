@@ -1,0 +1,72 @@
+[
+  {
+    "id": 6,
+    "name": "Zarbon",
+    "ki": "20.000",
+    "maxKi": "30.000",
+    "race": "Frieza Race",
+    "irudia": "zarbon"
+  },
+  {
+    "id": 5,
+    "name": "Freezer",
+    "ki": "530.000",
+    "maxKi": "52.71 Septillion",
+    "race": "Frieza Race",
+    "irudia": "freezer"
+
+
+  },
+  {
+    "id": 7,
+    "name": "Dodoria",
+    "ki": "18.000",
+    "maxKi": "20.000",
+    "race": "Frieza Race",
+    "irudia": "dodoria"
+
+  },
+  {
+    "id": 8,
+    "name": "Ginyu",
+    "ki": "9.000",
+    "maxKi": "25.000",
+    "race": "Frieza Race",
+    "irudia": "ginyu"
+
+  },
+  {
+    "id": 68,
+    "name": "Broly",
+    "ki": "7 quadrillion",
+    "maxKi": "11.2 Septillion",
+    "race": "Saiyan",
+    "irudia": "broly"
+
+  },
+  {
+    "id":38,
+    "name":"Jiren",
+    "ki":"121 Quintillion",
+    "maxKi":"12.1 Septillion",
+    "race":"Jiren Race",
+    "irudia": "jiren"
+
+  },
+  {
+    "id": 30,
+    "name": "Raditz",
+    "ki": "1.500 ",
+    "maxKi": "1.500 ",
+    "race": "Saiyan",
+    "irudia": "raditz"
+  },
+  {
+    "id": 42,
+    "name": "Marcarita ",
+    "ki": "10 septillion",
+    "maxKi": "99.5 septillion",
+    "race": "Angel",
+    "irudia": "marcarita"
+  }
+]

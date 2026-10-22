@@ -26,11 +26,24 @@ import androidx.compose.ui.unit.sp
 import com.example.adibklaseak.models.Datuak2
 import com.example.adibklaseak.models.Pertsonaia
 import com.example.adibklaseak.ui.theme.AdibKlaseakTheme
+import kotlinx.serialization.json.Json
 import androidx.compose.foundation.lazy.items
+import java.io.IOException
+import android.content.Context
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.runtime.remember
+import android.util.Log
+import androidx.compose.runtime.produceState
+import kotlinx.serialization.serializer
+import com.example.adibklaseak.R
+
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         enableEdgeToEdge()
         setContent {
             AdibKlaseakTheme {
@@ -45,13 +58,41 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun PertsonaiaZerrenda (modifier : Modifier = Modifier){
-    val pertsonaiak = Datuak2().pertsonaiakZerrenda()
+    //val pertsonaiak = Datuak2().pertsonaiakZerrenda()
+    val context = LocalContext.current
+    val pertsonaiak = remember { cargarDatosJsonLocal(context, "ikasleekin.json")}
+    remember { Log.d("Lista de personajes",pertsonaiak.toString())}
     LazyColumn(modifier = modifier) {
         items(pertsonaiak){pertsonaia -> PertsonaiaCard(pertsonaia)}
     }
 }
+fun cargarDatosJsonLocal(context:Context, nombreArchivo: String): List<Pertsonaia> {
+    return try {
+        val jsonString = context.assets.open(nombreArchivo)
+            .bufferedReader()
+            .use { it.readText() }
+
+        Log.d ("EL string: ",jsonString)
+
+        Json { ignoreUnknownKeys = true }
+            .decodeFromString<List<Pertsonaia>>(jsonString)
+    } catch (e: Exception) {
+        e.printStackTrace()
+        emptyList()
+    }
+}
 @Composable
 fun PertsonaiaCard(pertsonaia:Pertsonaia, modifier: Modifier = Modifier) {
+    val irudia = when (pertsonaia.irudia){
+        "broly" -> R.drawable.broly
+        "dodoria" -> R.drawable.dodoria
+        "freezer" -> R.drawable.freezer
+        "ginyu" -> R.drawable.ginyu
+        "jiren" -> R.drawable.jiren
+        "marcarita" -> R.drawable.marcarita
+        "raditz" -> R.drawable.raditz
+        else -> R.drawable.zarbon
+    }
     Card(
         modifier = modifier
             .fillMaxWidth()
@@ -66,9 +107,11 @@ fun PertsonaiaCard(pertsonaia:Pertsonaia, modifier: Modifier = Modifier) {
             horizontalArrangement = Arrangement.Start
         ) {
             Image(
-                painter = painterResource(pertsonaia.irudia),
+
+                painter = painterResource(irudia),
                 contentDescription = pertsonaia.name, // Dynamic content description
                 modifier = Modifier.padding(10.dp)
+                    .size(100.dp)
             )
             Column(
                 modifier = Modifier.padding(5.dp),
